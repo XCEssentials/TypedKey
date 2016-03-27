@@ -9,9 +9,13 @@
 public
 struct TypedKey<ValueType>
 {
+    public
     let name: String
+    
+    public
     let defaultValue: ValueType
     
+    public
     init(name: String, defaultValue: ValueType)
     {
         self.name = name

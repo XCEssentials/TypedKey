@@ -7,7 +7,9 @@
 //
 
 import XCTest
-@testable import MKHTypedKey
+
+//@testable
+import MKHTypedKey
 
 class MKHTypedKeyTests: XCTestCase {
     
