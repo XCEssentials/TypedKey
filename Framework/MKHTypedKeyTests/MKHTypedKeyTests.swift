@@ -21,11 +21,11 @@ class MKHTypedKeyTests: XCTestCase {
         let val4 = NSDate()
         let val5 = "Value number 5"
         
-        let key1 = TypedKey(name: "One", defaultValue: 0)
-        let key2 = TypedKey(name: "Two", defaultValue: true)
-        let key3 = TypedKey<Array<Int>>(name: "Three", defaultValue: [])
-        let key4 = TypedKey(name: "WrongKey", defaultValue: true)
-        let key5 = TypedKey(name: "WrongValueType", defaultValue: true)
+        let key1 = TypedKey("One", defaultValue: 0)
+        let key2 = TypedKey("Two", defaultValue: true)
+        let key3 = TypedKey<Array<Int>>("Three", defaultValue: [])
+        let key4 = TypedKey("WrongKey", defaultValue: true)
+        let key5 = TypedKey("WrongValueType", defaultValue: true)
         
         let dict: [String: AnyObject] = [key1.name: val1,
                                          key2.name: val2,

@@ -16,7 +16,7 @@ struct TypedKey<ValueType>
     let defaultValue: ValueType
     
     public
-    init(name: String, defaultValue: ValueType)
+    init(_ name: String, defaultValue: ValueType)
     {
         self.name = name
         self.defaultValue = defaultValue
