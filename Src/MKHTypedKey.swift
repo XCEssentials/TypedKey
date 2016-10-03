@@ -31,7 +31,7 @@ protocol TypedKeyAccessible
     func value<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType
     
     mutating
-    func setValue<ValueType>(value: ValueType, forKey key: TypedKey<ValueType>)
+    func setValue<ValueType>(_ value: ValueType, forKey key: TypedKey<ValueType>)
     
     mutating
     func removeValue<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType?

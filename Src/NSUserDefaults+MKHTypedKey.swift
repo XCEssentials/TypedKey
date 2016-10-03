@@ -6,7 +6,7 @@
 //  Copyright © 2016 Maxim Khatskevich. All rights reserved.
 //
 
-extension NSUserDefaults: TypedKeyAccessible
+extension UserDefaults: TypedKeyAccessible
 {
     public
     func value<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType
@@ -18,7 +18,7 @@ extension NSUserDefaults: TypedKeyAccessible
         // never be confused: http://stackoverflow.com/a/1062573
         
         if
-            let value = self.objectForKey(key.name) as? ValueType
+            let value = self.object(forKey: key.name) as? ValueType
         {
             result = value
         }
@@ -29,13 +29,9 @@ extension NSUserDefaults: TypedKeyAccessible
     }
     
     public
-    func setValue<ValueType>(value: ValueType, forKey key: TypedKey<ValueType>)
+    func setValue<ValueType>(_ value: ValueType, forKey key: TypedKey<ValueType>)
     {
-        if
-            let newValue = value as? AnyObject // make sure it's convertable
-        {
-            setObject(newValue, forKey: key.name)
-        }
+        set(value, forKey: key.name)
     }
     
     public
@@ -45,7 +41,7 @@ extension NSUserDefaults: TypedKeyAccessible
         
         //===
         
-        removeObjectForKey(key.name)
+        removeObject(forKey: key.name)
         
         //===
         

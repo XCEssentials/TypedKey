@@ -29,7 +29,7 @@ extension Dictionary: TypedKeyAccessible
     
     public
     mutating
-    func setValue<ValueType>(value: ValueType, forKey key: TypedKey<ValueType>)
+    func setValue<ValueType>(_ value: ValueType, forKey key: TypedKey<ValueType>)
     {
         if
             let keyName = key.name as? Key,
@@ -50,7 +50,7 @@ extension Dictionary: TypedKeyAccessible
         if
             let keyName = key.name as? Key
         {
-            result = removeValueForKey(keyName) as? ValueType
+            result = self.removeValue(forKey: keyName) as? ValueType
         }
         
         //===
