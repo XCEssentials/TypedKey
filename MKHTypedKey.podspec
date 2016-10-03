@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                      = 'MKHTypedKey'
-  s.version                   = '1.0.0'
+  s.version                   = '2.0.0'
   s.summary                   = 'Generic key for explicit type safe access to values from any key-value storage.'
   s.homepage                  = 'https://github.com/maximkhatskevich/#{s.name}'
   s.license                   = { :type => 'MIT', :file => 'LICENSE' }
