@@ -215,7 +215,7 @@ let project = Project(projectName) { project in
 
         //---
 
-        fwk.unitTests { fwkTests in
+        fwk.unitTests(targetName.tst) { fwkTests in
 
             fwkTests.include(sourcesPath.tst)
 

@@ -40,7 +40,7 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         DEFINES_MODULE: "NO"
         SKIP_INSTALL: "YES"
-  Tests:
+  TypedKeyTst:
     platform: "ios"
     type: ":bundle.unit-test"
     references:
