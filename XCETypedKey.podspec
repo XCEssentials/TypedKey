@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name                      = 'XCETypedKey'
   s.summary                   = 'Generic key for type safe access to values in any key-value storage.'
-  s.version                   = '0.1.0'
+  s.version                   = '2.1.0'
   s.homepage                  = 'https://XCEssentials.github.io/TypedKey'
 
   s.source                    = { :git => 'https://github.com/XCEssentials/TypedKey.git', :tag => s.version }
