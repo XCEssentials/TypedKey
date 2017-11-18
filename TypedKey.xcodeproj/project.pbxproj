@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02F4BF2CCA3FB18130EFA524 /* MKHTypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F78E645B8147BC9EA9E16B5 /* MKHTypedKey.swift */; };
+		02F4BF2CCA3FB18130EFA524 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F78E645B8147BC9EA9E16B5 /* Main.swift */; };
 		0EE961AF0F68B8AC91051752 /* UserDefaults+XCETypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1886B51F92E0F5069012B91 /* UserDefaults+XCETypedKey.swift */; };
 		4743471CC1EE154775FAF2D3 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853877320F858A2D921FDB2A /* Main.swift */; };
 		4807CA9E633C462F7A6BD4C1 /* Dictionary+XCETypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38528B648CB5C9D506636D3C /* Dictionary+XCETypedKey.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		38528B648CB5C9D506636D3C /* Dictionary+XCETypedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+XCETypedKey.swift"; sourceTree = "<group>"; };
 		4134BA948AAABC747A997455 /* XCETypedKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCETypedKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F78E645B8147BC9EA9E16B5 /* MKHTypedKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKHTypedKey.swift; sourceTree = "<group>"; };
+		5F78E645B8147BC9EA9E16B5 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		853877320F858A2D921FDB2A /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		86F1414377D02C79296672BE /* TypedKeyTst.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypedKeyTst.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F039D388BBC2FCCA1AC3AC8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -80,8 +80,8 @@
 		3BA2CBFE2D17A02965192D70 /* TypedKey */ = {
 			isa = PBXGroup;
 			children = (
+				5F78E645B8147BC9EA9E16B5 /* Main.swift */,
 				38528B648CB5C9D506636D3C /* Dictionary+XCETypedKey.swift */,
-				5F78E645B8147BC9EA9E16B5 /* MKHTypedKey.swift */,
 				F1886B51F92E0F5069012B91 /* UserDefaults+XCETypedKey.swift */,
 			);
 			path = TypedKey;
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4807CA9E633C462F7A6BD4C1 /* Dictionary+XCETypedKey.swift in Sources */,
-				02F4BF2CCA3FB18130EFA524 /* MKHTypedKey.swift in Sources */,
+				02F4BF2CCA3FB18130EFA524 /* Main.swift in Sources */,
 				0EE961AF0F68B8AC91051752 /* UserDefaults+XCETypedKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +262,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = NO;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Info/TypedKey.plist;
@@ -286,7 +286,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = NO;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Info/TypedKey.plist;
