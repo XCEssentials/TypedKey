@@ -1,27 +1,23 @@
-extension Dictionary: TypedKeyAccessible
+extension Dictionary: TypedKeyCompatible
 {
     public
-    func value<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType
+    func value<T>(for key: TypedKey<T>) throws -> T
     {
-        var result = key.defaultValue
-        
-        //===
-        
         if
             let keyName = key.name as? Key, // http://stackoverflow.com/q/33620191
-            let value = self[keyName] as? ValueType
+            let value = self[keyName] as? T
         {
-            result = value
+            return value
         }
-        
-        //===
-        
-        return result
+        else
+        {
+            throw NoValue(keyName: key.name, valueType: T.self)
+        }
     }
     
     public
     mutating
-    func setValue<ValueType>(_ value: ValueType, forKey key: TypedKey<ValueType>)
+    func set<T>(value: T, for key: TypedKey<T>)
     {
         if
             let keyName = key.name as? Key,
@@ -33,20 +29,17 @@ extension Dictionary: TypedKeyAccessible
     
     public
     mutating
-    func removeValue<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType?
+    func removeValue<T>(for key: TypedKey<T>) throws -> T
     {
-        var result: ValueType? = nil
-        
-        //===
-        
         if
-            let keyName = key.name as? Key
+            let keyName = key.name as? Key,
+            let result = self.removeValue(forKey: keyName) as? T
         {
-            result = self.removeValue(forKey: keyName) as? ValueType
+            return result
         }
-        
-        //===
-        
-        return result
+        else
+        {
+            throw NoValue(keyName: key.name, valueType: T.self)
+        }
     }
 }

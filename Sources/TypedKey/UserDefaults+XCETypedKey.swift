@@ -2,38 +2,34 @@ import Foundation
 
 //===
 
-extension UserDefaults: TypedKeyAccessible
+extension UserDefaults: TypedKeyCompatible
 {
     public
-    func value<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType
+    func value<T>(for key: TypedKey<T>) throws -> T
     {
-        var result = key.defaultValue
-        
-        //===
-        
         // never be confused: http://stackoverflow.com/a/1062573
         
         if
-            let value = self.object(forKey: key.name) as? ValueType
+            let result = self.object(forKey: key.name) as? T
         {
-            result = value
+            return result
         }
-        
-        //===
-        
-        return result
+        else
+        {
+            throw NoValue(keyName: key.name, valueType: T.self)
+        }
     }
     
     public
-    func setValue<ValueType>(_ value: ValueType, forKey key: TypedKey<ValueType>)
+    func set<T>(value: T, for key: TypedKey<T>)
     {
         set(value, forKey: key.name)
     }
     
     public
-    func removeValue<ValueType>(forKey key: TypedKey<ValueType>) -> ValueType?
+    func removeValue<T>(for key: TypedKey<T>) throws -> T
     {
-        let result = value(forKey: key)
+        let result = try value(for: key)
         
         //===
         
