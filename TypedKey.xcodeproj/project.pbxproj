@@ -84,7 +84,6 @@
 				5F78E645B8147BC9EA9E16B5 /* MKHTypedKey.swift */,
 				F1886B51F92E0F5069012B91 /* UserDefaults+XCETypedKey.swift */,
 			);
-			name = TypedKey;
 			path = TypedKey;
 			sourceTree = "<group>";
 		};
@@ -94,7 +93,6 @@
 				3BA2CBFE2D17A02965192D70 /* TypedKey */,
 				44F7511F777D77EE6BA15347 /* TypedKeyTst */,
 			);
-			name = Sources;
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -103,7 +101,6 @@
 			children = (
 				853877320F858A2D921FDB2A /* Main.swift */,
 			);
-			name = TypedKeyTst;
 			path = TypedKeyTst;
 			sourceTree = "<group>";
 		};
@@ -120,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = "$local";
+			name = $local;
 			sourceTree = "<group>";
 		};
 		880B0E545A2B21CDE4440790 /* iOS */ = {
@@ -186,7 +183,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 				Struct.Version = 2.1.0;
 			};
 			buildConfigurationList = 2867F727376B42145AF2ECDC /* Build configuration list for PBXProject "TypedKey" */;
@@ -221,7 +218,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi";
-			showEnvVarsInLog = 1;
 		};
 		B3E68AB83A6468EECC6DBCBF /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -236,7 +232,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -266,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = NO;
 				ENABLE_TESTABILITY = YES;
@@ -289,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = NO;
 				ENABLE_TESTABILITY = YES;
