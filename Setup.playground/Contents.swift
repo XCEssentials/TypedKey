@@ -204,6 +204,7 @@ let project = Project(projectName) { project in
 
             //--- Framework related:
 
+            "PRODUCT_NAME" <<< moduleName,
             "DEFINES_MODULE" <<< "NO",
             "SKIP_INSTALL" <<< "YES"
         )

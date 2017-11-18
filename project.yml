@@ -29,6 +29,7 @@ targets:
         INFOPLIST_FILE: "Info/TypedKey.plist"
         SDKROOT: "iphoneos"
         TARGETED_DEVICE_FAMILY: "1,2"
+        PRODUCT_NAME: "XCETypedKey"
         DEFINES_MODULE: "NO"
         SKIP_INSTALL: "YES"
         MTL_ENABLE_DEBUG_INFO: "true"
@@ -38,6 +39,7 @@ targets:
         INFOPLIST_FILE: "Info/TypedKey.plist"
         SDKROOT: "iphoneos"
         TARGETED_DEVICE_FAMILY: "1,2"
+        PRODUCT_NAME: "XCETypedKey"
         DEFINES_MODULE: "NO"
         SKIP_INSTALL: "YES"
   TypedKeyTst:
