@@ -1,11 +1,3 @@
-//
-//  Dictionary+MKHTypedKey.swift
-//  MKHTypedKey
-//
-//  Created by Maxim Khatskevich on 3/26/16.
-//  Copyright © 2016 Maxim Khatskevich. All rights reserved.
-//
-
 extension Dictionary: TypedKeyAccessible
 {
     public

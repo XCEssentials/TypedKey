@@ -1,17 +1,9 @@
-//
-//  MKHTypedKeyTests.swift
-//  MKHTypedKeyTests
-//
-//  Created by Maxim Khatskevich on 3/26/16.
-//  Copyright © 2016 Maxim Khatskevich. All rights reserved.
-//
-
 import XCTest
 
 //@testable
-import MKHTypedKey
+import XCETypedKey
 
-class MKHTypedKeyTests: XCTestCase {
+class Main: XCTestCase {
     
     func testAccessValues()
     {
@@ -23,7 +15,7 @@ class MKHTypedKeyTests: XCTestCase {
         
         let key1 = TypedKey("One", defaultValue: 0)
         let key2 = TypedKey("Two", defaultValue: true)
-        let key3 = TypedKey<Array<Int>>("Three", defaultValue: [])
+        let key3 = TypedKey<[Int]>("Three", defaultValue: [])
         // let key4 = TypedKey("WrongKey", defaultValue: true)
         let key5 = TypedKey("WrongValueType", defaultValue: true)
         
