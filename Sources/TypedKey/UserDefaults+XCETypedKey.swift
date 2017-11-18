@@ -1,10 +1,6 @@
-//
-//  NSUserDefaults+MKHTypedKey.swift
-//  MKHTypedKey
-//
-//  Created by Maxim Khatskevich on 3/27/16.
-//  Copyright © 2016 Maxim Khatskevich. All rights reserved.
-//
+import Foundation
+
+//===
 
 extension UserDefaults: TypedKeyAccessible
 {
