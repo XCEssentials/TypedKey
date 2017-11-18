@@ -15,7 +15,7 @@ class Main: XCTestCase {
         
         let key1 = TypedKey("One", defaultValue: 0)
         let key2 = TypedKey("Two", defaultValue: true)
-        let key3 = TypedKey<Array<Int>>("Three", defaultValue: [])
+        let key3 = TypedKey<[Int]>("Three", defaultValue: [])
         // let key4 = TypedKey("WrongKey", defaultValue: true)
         let key5 = TypedKey("WrongValueType", defaultValue: true)
         
