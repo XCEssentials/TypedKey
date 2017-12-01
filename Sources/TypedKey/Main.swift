@@ -5,13 +5,9 @@ struct TypedKey<Value>
     let name: String
     
     public
-    let defaultValue: Value
-    
-    public
-    init(_ name: String, defaultValue: Value)
+    init(_ name: String)
     {
         self.name = name
-        self.defaultValue = defaultValue
     }
 }
 
