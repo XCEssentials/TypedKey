@@ -13,11 +13,11 @@ class Main: XCTestCase {
         let val4 = Date()
         let val5 = "Value number 5"
         
-        let key1 = TypedKey("One", defaultValue: 0)
-        let key2 = TypedKey("Two", defaultValue: true)
-        let key3 = TypedKey<[Int]>("Three", defaultValue: [])
-        // let key4 = TypedKey("WrongKey", defaultValue: true)
-        let key5 = TypedKey("WrongValueType", defaultValue: true)
+        let key1 = TypedKey<Int>("One")
+        let key2 = TypedKey<Bool>("Two")
+        let key3 = TypedKey<[Int]>("Three")
+        // let key4 = TypedKey("WrongKey")
+        let key5 = TypedKey<Bool>("WrongValueType")
         
         let dict: [String: Any] = [key1.name: val1,
                                    key2.name: val2,
@@ -25,20 +25,20 @@ class Main: XCTestCase {
                                    "Four": val4,
                                    key5.name: val5]
         
-        XCTAssertEqual(val1, dict.value(forKey: key1))
-        XCTAssertEqual(val2, dict.value(forKey: key2))
+        XCTAssertEqual(val1, try? dict.value(for: key1))
+        XCTAssertEqual(val2, try? dict.value(for: key2))
         
         // it's NOT equal, because
         // the key forces conversiont to Array<Int> when we access value,
         // while the original value is Array<Double>,
         // just keep in mind that the  key forces value type conversion,
         // it's made this way on purpose:
-        // XCTAssertNotEqual(val3, dict.value(forKey: key3))
+        // XCTAssertNotEqual(val3, dict.value(for: key3))
         
         // it's NOT equal, because
         // "key4" has wrong key name,
         // "val4" has been added to the dict with different key name
-        // XCTAssertNotEqual(val4, dict.value(forKey: key4))
+        // XCTAssertNotEqual(val4, dict.value(for: key4))
         
         // the below expression won't even compile,
         // because "key5" has been constructed with "defaultValue"
@@ -46,7 +46,7 @@ class Main: XCTestCase {
         // (and so return value of the "value..." function
         // is not compatible with "val5" type,
         // and it's made this way on purpose
-        // XCTAssertNotEqual(val5, dict.value(forKey: key5))
+        // XCTAssertNotEqual(val5, dict.value(for: key5))
         
         // NOTE: use "setValue..." function of "TypedKeyAccessible"
         // to avoid adding incompatible key-value pairs
